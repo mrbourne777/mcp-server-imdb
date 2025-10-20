@@ -38,9 +38,9 @@ async def make_api_request(endpoint: str, params: dict[str, Any] | None = None) 
 
 @mcp.tool()
 async def search_movies(
-    q: str | None = None,
-    tt: str | None = None,
-    lsn: int | None = None
+    q: str = "",
+    tt: str = "",
+    lsn: int = 0
 ) -> dict[str, Any]:
     """
     Search for movies on IMDb or get detailed information about a specific title.
